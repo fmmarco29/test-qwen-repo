@@ -24,7 +24,7 @@ export default function LandingNavbar() {
             <a href="#equipo" className="text-sm text-slate-600 hover:text-cyan-600 transition-colors">Equipo</a>
             <a href="#testimonios" className="text-sm text-slate-600 hover:text-cyan-600 transition-colors">Testimonios</a>
             <a href="#contacto" className="text-sm text-slate-600 hover:text-cyan-600 transition-colors">Contacto</a>
-            <Link href="/dashboard" className="px-5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white text-sm font-medium transition-all hover:shadow-lg hover:shadow-cyan-500/25">
+            <Link href="/login" className="px-5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white text-sm font-medium transition-all hover:shadow-lg hover:shadow-cyan-500/25">
               Acceder al Portal
             </Link>
           </div>
@@ -46,7 +46,7 @@ export default function LandingNavbar() {
             <a href="#equipo" className="block px-3 py-2 text-sm text-slate-600" onClick={() => setIsOpen(false)}>Equipo</a>
             <a href="#testimonios" className="block px-3 py-2 text-sm text-slate-600" onClick={() => setIsOpen(false)}>Testimonios</a>
             <a href="#contacto" className="block px-3 py-2 text-sm text-slate-600" onClick={() => setIsOpen(false)}>Contacto</a>
-            <Link href="/dashboard" className="block px-3 py-2 text-sm text-cyan-600 font-medium" onClick={() => setIsOpen(false)}>Acceder al Portal →</Link>
+            <Link href="/login" className="block px-3 py-2 text-sm text-cyan-600 font-medium" onClick={() => setIsOpen(false)}>Acceder al Portal →</Link>
           </div>
         )}
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { useAuth } from "@/context/AuthContext";
 import DashboardSidebar from "@/components/dashboard/DashboardSidebar";
@@ -9,20 +9,30 @@ import DashboardHeader from "@/components/dashboard/DashboardHeader";
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const { user, isLoading } = useAuth();
   const router = useRouter();
-  const pathname = usePathname();
+  const [isChecking, setIsChecking] = useState(true);
 
   useEffect(() => {
-    if (!isLoading && !user) {
-      router.push("/");
+    if (!isLoading) {
+      if (!user) {
+        router.push("/");
+      } else {
+        setIsChecking(false);
+      }
     }
   }, [user, isLoading, router]);
 
-  if (isLoading || !user) {
+  if (isLoading || isChecking) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <div className="animate-pulse text-slate-500">Cargando...</div>
+        <div className="text-center">
+          <div className="animate-pulse text-slate-400 text-lg">Cargando...</div>
+        </div>
       </div>
     );
+  }
+
+  if (!user) {
+    return null;
   }
 
   return (

@@ -13,7 +13,7 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (user) router.push("/dashboard");
+    if (user) router.push("/dashboard/overview");
   }, [user, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -23,7 +23,7 @@ export default function LoginPage() {
     const ok = login(email, password);
     setLoading(false);
     if (ok) {
-      router.push("/dashboard");
+      router.push("/dashboard/overview");
     } else {
       setError("Email o contraseña incorrectos");
     }
