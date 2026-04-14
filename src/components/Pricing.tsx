@@ -45,7 +45,6 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-24 border-t border-[#1e293b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Simple, transparent <span className="gradient-text">pricing</span>
@@ -55,7 +54,6 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Plans Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan) => (
             <div

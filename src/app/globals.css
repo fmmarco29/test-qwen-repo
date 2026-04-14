@@ -41,7 +41,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Gradient text utility */
 .gradient-text {
   background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   -webkit-background-clip: text;
@@ -49,12 +48,10 @@ body {
   background-clip: text;
 }
 
-/* Glow effect */
 .glow {
   box-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
 }
 
-/* Animation keyframes */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }

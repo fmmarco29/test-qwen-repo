@@ -15,7 +15,6 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-[#0a0a0f]/80 border-b border-[#1e293b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center">
               <span className="text-white font-bold text-lg">N</span>
@@ -23,7 +22,6 @@ export default function Navbar() {
             <span className="text-xl font-bold">Nexus</span>
           </a>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
@@ -42,7 +40,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-gray-400 hover:text-white"
             onClick={() => setIsOpen(!isOpen)}
@@ -57,7 +54,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2">
             {navLinks.map((link) => (

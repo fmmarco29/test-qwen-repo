@@ -40,7 +40,6 @@ export default function Footer() {
     <footer className="border-t border-[#1e293b] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
-          {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center">
@@ -58,7 +57,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Links */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
               <h4 className="font-medium mb-3">{title}</h4>
@@ -75,7 +73,6 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom */}
         <div className="pt-8 border-t border-[#1e293b] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500">© 2026 Nexus. All rights reserved.</p>
           <div className="flex items-center gap-2 text-sm text-gray-500">

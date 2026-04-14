@@ -23,7 +23,6 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="py-24 border-t border-[#1e293b]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Loved by <span className="gradient-text">builders</span>
@@ -33,14 +32,12 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((t) => (
             <div
               key={t.author}
               className="p-6 rounded-2xl border border-[#1e293b] bg-[#111827]"
             >
-              {/* Stars */}
               <div className="flex gap-0.5 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
