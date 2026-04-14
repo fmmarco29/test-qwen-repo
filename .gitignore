@@ -30,3 +30,12 @@ Thumbs.db
 coverage/
 htmlcov/
 .coverage
+
+# Node
+node_modules/
+.next/
+out/
+
+# Next.js
+.next/
+.next/cache/
