@@ -104,7 +104,7 @@ const MOCK_APPOINTMENTS: Appointment[] = [
 
 const MOCK_RECORDS: MedicalRecord[] = [
   { id: "1", patientId: "1", date: "2026-04-13", diagnosis: "Manchas por café y tabaco", treatment: "Blanqueamiento LED Zoom", toothNumber: undefined, prescription: "Gel desensibilizante 3 días", notes: "2 sesiones necesarias", followUpDate: "2026-04-27", doctor: "Dr. García" },
-  { id: "2", patientId: "7", patientId: "2", date: "2026-03-28", diagnosis: "Caries profunda en pieza 36", treatment: "Empaste de composite", toothNumber: 36, prescription: "Ibuprofeno 600mg cada 8h x 3 días", notes: "", followUpDate: "2026-04-14", doctor: "Dr. García" },
+  { id: "2", patientId: "2", date: "2026-03-28", diagnosis: "Caries profunda en pieza 36", treatment: "Empaste de composite", toothNumber: 36, prescription: "Ibuprofeno 600mg cada 8h x 3 días", notes: "", followUpDate: "2026-04-14", doctor: "Dr. García" },
   { id: "3", patientId: "3", date: "2026-04-10", diagnosis: "Pulpitis irreversible pieza 26", treatment: "Endodoncia - sesión 1", toothNumber: 26, prescription: "Amoxicilina 500mg cada 8h x 7 días", notes: "Programar sesión 2", followUpDate: "2026-04-14", doctor: "Dra. López" },
   { id: "4", patientId: "4", date: "2026-04-05", diagnosis: "Gingivitis moderada", treatment: "Limpieza profesional + instrucciones higiene", toothNumber: undefined, prescription: "Clorhexidina 0.12% enjuague 2x día", notes: "Mejorar técnica de cepillado", followUpDate: "2026-07-05", doctor: "Dr. García" },
 ];
