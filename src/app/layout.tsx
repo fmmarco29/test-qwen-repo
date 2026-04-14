@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { AuthProvider } from "@/context/AuthContext";
+import { DataProvider } from "@/context/DataContext";
 
 export const metadata: Metadata = {
-  title: "Nexus - Build Faster with Modern Tools",
-  description: "The all-in-one platform that helps teams design, develop, and deploy products at lightning speed.",
+  title: "DentalCare Pro - Clínica Dental",
+  description: "Sistema profesional de gestión de clínica dental",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className="antialiased">
-        {children}
+        <AuthProvider>
+          <DataProvider>
+            {children}
+          </DataProvider>
+        </AuthProvider>
       </body>
     </html>
   );

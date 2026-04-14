@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DentalCare Pro - Clínica Dental
 
-## Getting Started
+Sistema profesional de gestión de clínica dental con landing page y portal de administración.
 
-First, run the development server:
+## 🦀 Características
+
+### Landing Page Pública
+- Hero con diseño moderno y gradientes
+- Sección de servicios con precios
+- Estadísticas de la clínica
+- Equipo médico
+- Testimonios de pacientes
+- Formulario de contacto
+- Footer completo
+
+### Portal de Gestión (Dashboard)
+- **Autenticación** - Login con roles (admin, doctor, recepcionista)
+- **Panel Principal** - Métricas, citas del día, actividad reciente, acciones rápidas
+- **Pacientes** - CRUD completo con búsqueda y filtros
+- **Citas** - Calendario, crear, editar, cambiar estado
+- **Historiales Médicos** - Registros clínicos por paciente con diagnóstico, tratamiento, prescripción
+- **Tratamientos** - Catálogo con precios, categorías, toggle activo/inactivo
+- **Facturación** - Facturas, estados de pago, resumen financiero
+
+## 🚀 Tech Stack
+
+- **Next.js 15** - App Router, React Server Components
+- **TypeScript** - Tipado completo
+- **Tailwind CSS v4** - Estilos modernos
+- **Context API** - Estado global (auth + datos)
+- **Mock Data** - Datos de ejemplo completos
+
+## 📦 Instalación
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔑 Cuentas de prueba
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Email | Contraseña | Rol |
+|-------|-----------|-----|
+| admin@dental.com | admin123 | Administrador |
+| doctor@dental.com | doctor123 | Doctor |
+| recepcion@dental.com | recepcion123 | Recepción |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Deploy
 
-## Learn More
+Desplegado en Vercel: https://dentalcare-pro.vercel.app
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Estructura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/
+│   ├── (landing)/          # Landing page pública
+│   │   └── page.tsx
+│   ├── (dashboard)/
+│   │   └── dashboard/
+│   │       ├── login/      # Página de login
+│   │       ├── overview/   # Panel principal
+│   │       ├── patients/   # Gestión pacientes
+│   │       ├── appointments/ # Gestión citas
+│   │       ├── records/    # Historiales médicos
+│   │       ├── treatments/ # Catálogo tratamientos
+│   │       └── billing/    # Facturación
+│   ├── layout.tsx
+│   ├── globals.css
+│   └── page.tsx            # Landing
+├── components/
+│   ├── landing/            # Componentes landing page
+│   └── dashboard/          # Componentes dashboard
+├── context/
+│   ├── AuthContext.tsx     # Autenticación
+│   └── DataContext.tsx     # Datos globales
+└── lib/
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
